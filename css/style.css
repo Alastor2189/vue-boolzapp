@@ -39,21 +39,26 @@ html {
     height: 60px;
 }
 
-.image {
+.image,
+.name-chat {
     display: flex;
     align-items: center;
     width: 50%;
 }
 
-#icon-myaccount {
+#icon-myaccount,
+.icon-chat {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 50%;
 }
 
-#icon-myaccount i {
+#icon-myaccount i,
+.contact-research i,
+.icon-chat i {
     margin-right: 1em;
+    opacity: 0.3;
 }
 
 .notification {
@@ -66,10 +71,34 @@ html {
 .fas.fa-bell-slash {
     background-color: white;
     border-radius: 50px;
-    font-size: 1em;
+    font-size: 0.8em;
     padding: 1em 0.8em;
     color: #8edafc;
     margin: 0 8px;
+}
+
+.notification a {
+    color: black;
+    opacity: 0.3;
+    font-size: 0.8em;
+}
+
+.research,
+.top-chat,
+.footer-chat {
+    height: 70px;
+}
+
+#research-contact {
+    border: 0px;
+    width: 77%;
+    font-size: 0.7em;
+}
+
+.contact-research {
+    height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -83,4 +112,22 @@ html {
 img {
     height: 50px;
     border-radius: 25px;
+}
+
+.top-chat {
+    display: flex;
+}
+
+.content-chat {
+    height: calc(100vh - 140px);
+    background-image: url(../img/mine.jpg);
+}
+
+
+/* footer della sezione chat */
+
+.footer-chat {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
