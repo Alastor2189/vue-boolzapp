@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,74 +19,92 @@
 </head>
 
 <body>
-    <div id="root">
-        <div class="container">
-            <div class="main-container">
-                <section class="contact">
-                    <div class="my-account">
-                        <div class="research">
-                            <div class="image">
-                                <img src="img/avatar_io.jpg" alt="il mio avatar">
-                                <h6>Sofia</h6>
-                            </div>
-                            <div id="icon-myaccount">
-                                <i class="fas fa-circle-notch"></i>
-                                <i class="fas fa-comment-alt"></i>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                        <div class="notification">
-                            <i class="fas fa-bell-slash"></i>
-                            <div>
-                                <h6>Ricevi notifiche di nuovi messaggi</h6>
-                                <a href="">Attiva notifiche desktop</a>
-                            </div>
-                        </div>
-                        <div class="contact-research">
-                            <i class="fas fa-search"></i>
-                            <input type="text" name="research-contact" id="research-contact" placeholder="Cerca o inizia una nuova chat">
-                        </div>
-                        <div class="myaccount-contact">
+    <div id="root" class="container">
 
-                        </div>
-                    </div>
-                </section>
-                <section class="chat">
-                    <div class="container-chat">
-                        <div class="top-chat">
-                            <div class="name-chat">
-                                <img src="img/avatar_1.jpg" alt="avatar di Michele">
-                                <div class="data-chat">
-                                    <h6>Michele</h6>
-                                    <p>Ultimo accesso oggi alle 12:00</p>
-                                </div>
-                            </div>
-                            <div class="icon-chat">
-                                <i class="fas fa-search"></i>
-                                <i class="fas fa-paperclip"></i>
-                                <i class="fas fa-ellipsis-v"></i>
-                            </div>
-                        </div>
-                        <div class="content-chat">
+        <!-- sezione  sinistra -->
+        <div class="contact">
+            <div class="my-account">
 
-                        </div>
-                        <div class="footer-chat">
-                            <div class="emoction">
-                                <i class="far fa-smile"></i>
-                            </div>
-                            <div class="message">
-                                <input type="text" name="insert-message" id="insert-message">
-                            </div>
-                            <div class="vocal">
-                                <i class="fas fa-microphone"></i>
-                            </div>
-                        </div>
+                <!-- header sinistra -->
+                <div class="research">
+                    <div class="image">
+                        <img src="img/avatar_io.jpg" alt="il mio avatar">
+                        <h6>Sofia</h6>
                     </div>
-                </section>
+                    <div id="icon-myaccount">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- header sinistra -->
+                <!-- sezione notifiche -->
+                <div class="notification">
+                    <i class="fas fa-bell-slash"></i>
+                    <div>
+                        <h6>Ricevi notifiche di nuovi messaggi</h6>
+                        <a href="">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- sezione notifiche -->
+                <!-- ricerca chat -->
+                <div class="search-icon">
+                    <div class="contact-research">
+                        <label for="search" class="search_icon">
+                        <i class="fas fa-search"></i>
+                    </label>
+                        <input class="search_input" type="text" name="research-contact" id="research-contact" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+                <!-- ricerca chat -->
+                <!-- avatar contatti -->
+                <div class="myaccount-contact">
+
+                </div>
+                <!-- avatar contatti -->
             </div>
         </div>
+        <!-- sezione sinistra -->
+        <!-- sezione  destra -->
+        <div class="chat">
+            <!-- header destro -->
+            <div class="top-chat">
+                <div class="name-chat">
+                    <img src="img/avatar_1.jpg" alt="avatar di Michele">
+                    <div class="data-chat">
+                        <h6>Michele</h6>
+                        <p>Ultimo accesso oggi alle 12:00</p>
+                    </div>
+                </div>
+                <div class="icon-chat">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <!-- header destro -->
+            <!-- contenuto della chat -->
+            <div class="content-chat">
 
+            </div>
+            <!-- contenuto della chat -->
+            <!-- footer destro -->
+            <div class="footer-chat">
+                <div class="emoction">
+                    <i class="far fa-smile"></i>
+                </div>
+                <div class="message">
+                    <input type="text" name="insert-message" id="insert-message">
+                </div>
+                <div class="vocal">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+            <!-- footer destro -->
+
+        </div>
     </div>
+
     <script src="js/script.js" type="text/javascript"></script>
 </body>
 
