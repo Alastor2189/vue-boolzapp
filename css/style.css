@@ -133,11 +133,17 @@ body {
 
 .contacts {
     display: flex;
-    justify-content: start;
     align-items: center;
     flex-direction: column;
-    max-height: calc(100% - 200px);
     overflow-y: scroll;
+    height: calc(100% - 200px);
+}
+
+.contact-avatar {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    height: 70px;
 }
 
 .contact-text h3,
@@ -191,6 +197,7 @@ img {
 
 .message {
     display: flex;
+    margin-bottom: 1em;
 }
 
 .message-box {
@@ -208,7 +215,6 @@ img {
 
 .message--sent {
     justify-content: flex-end;
-    margin-bottom: 1em;
 }
 
 .message-received {

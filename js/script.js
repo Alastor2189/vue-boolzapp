@@ -167,5 +167,9 @@ const app = new Vue({
 
     },
     // Methods
-    methods: {}
+    methods: {
+        selectContact(index) {
+            this.currentContact = index
+        }
+    }
 })

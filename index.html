@@ -59,7 +59,7 @@
                 <!-- ricerca chat -->
                 <!-- avatar contatti -->
                 <div class="contacts">
-                    <div v-for="(element, index) in contacts" :class="currentContact === index ? 'contact--active': ''" class="contact-avatar">
+                    <div v-for="(element, index) in contacts" :class="currentContact === index ? 'contact--active': ''" @click="selectContact(index)" class="contact-avatar">
                         <img :src=" 'img/avatar' + element.avatar + '.jpg' " :alt="element.name">
                         <div class="contact-text">
                             <div class="main-text">
@@ -97,26 +97,26 @@
             <!-- header destro -->
             <!-- contenuto della chat -->
             <section class="content-chat">
-                <div class="message message--sent">
+                <div class="message" :class="'message--' + item.status" v-for="item in contacts[currentContact].messages">
                     <div class="message-box">
                         <div class="message-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, saepe dolores amet exercitationem officiis dolorum maiores possimus non atque quibusdam natus at sed repudiandae deserunt blanditiis culpa tempore omnis consequatur?
+                            {{ item.message }}
                         </div>
                         <div class="message-time">
-                            12:00
+                            {{ item.date }}
                         </div>
                     </div>
                 </div>
-                <div class="message message--received">
+                <!-- <div class="message message--received" v-for="item in contacts[currentContact].messages">
                     <div class="message-box">
                         <div class="message-text">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit molestiae repellat autem dolores quam quas inventore fugiat, harum pariatur, voluptatibus culpa possimus laboriosam distinctio dolor obcaecati sapiente fuga! Sint, ducimus?
+                            {{ item.message }}
                         </div>
                         <div class="message-time">
-                            12:00
+                            {{ item.date }}
                         </div>
                     </div>
-                </div>
+                </div> -->
             </section>
 
             <!-- contenuto della chat -->
