@@ -58,19 +58,20 @@
                 </div>
                 <!-- ricerca chat -->
                 <!-- avatar contatti -->
-                <div class="myaccount-contact">
-                    <div class="contact-avatar">
-                        <img src="img/avatar_1.jpg" alt="Michele">
-                    </div>
-                    <div class="contact-text">
-                        <div class="main-text">
-                            <h3>
-                                Michele
-                            </h3>
-                            <p>12:00</p>
+                <div class="contacts">
+                    <div v-for="(element, index) in contacts" :class="currentContact === index ? 'contact--active': ''" class="contact-avatar">
+                        <img :src=" 'img/avatar' + element.avatar + '.jpg' " :alt="element.name">
+                        <div class="contact-text">
+                            <div class="main-text">
+                                <h3>
+                                    {{element.name}}
+                                </h3>
+                                <p>12:00</p>
+                            </div>
+                            <small>Ultimo messaggio inviato</small>
                         </div>
-                        <small>Ultimo messaggio inviato</small>
                     </div>
+
                 </div>
                 <!-- avatar contatti -->
             </div>

@@ -131,12 +131,13 @@ body {
     border: 0;
 }
 
-.myaccount-contact {
+.contacts {
     display: flex;
     justify-content: start;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid grey;
+    flex-direction: column;
+    max-height: calc(100% - 200px);
+    overflow-y: scroll;
 }
 
 .contact-text h3,
@@ -155,6 +156,10 @@ body {
 
 .contact-text {
     flex-grow: 1;
+}
+
+.contact--active {
+    background-color: #e9ebeb;
 }
 
 
