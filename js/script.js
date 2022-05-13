@@ -1,7 +1,6 @@
 Vue.config.devtools = true;
 
-
-// dayjs.extend(window.dayjs_plugin_customParseFormat);
+dayjs.extend(window.dayjs_plugin_customParseFormat);
 
 const app = new Vue({
     el: "#root",
@@ -163,13 +162,21 @@ const app = new Vue({
         ],
 
         currentContact: 0,
-
+        newMessage = ''
 
     },
     // Methods
     methods: {
         selectContact(index) {
             this.currentContact = index
+        }
+        sendMessage() {
+            const selectedContact = this.contacts[this.currentContact];
+            selectedContact.messages.push({
+                date: dayjs().format('DD-MM-YYYY HH:mm:ss'),
+                message: this.newMessage,
+                status: 'sent'
+            })
         }
     }
 })
